@@ -1,0 +1,37 @@
+1- Teste de conexão com o BD
+a- criar hibernate cfg
+b- <property name="hbm2ddl.auto">update</property>
+
+b-criar pacote  Vendas.util e classe HibernateUtil.java
+c- criar pacote Vendas.main e classe  GerarTabela.java
+
+
+2 Criar tabelas
+ -criar pacote Venda.domain
+criar classe Fornecedor e criar a tabela- tb_fornecedores conforme diagrama
+com todos os atributos.
+criar os get e set
+
+observação: @GeneratedValue para trabalhar no autoincremento no campo código
+na tabela funcionarios- coluna cpf colocar UNIQUE= TRUE
+
+ ir para hibernate.cfg
+<property name="hbm2ddl.auto">update</property>
+<mapping class="br.com.Vendas.domain.Fornecedor" />
+ir para GerarTabela no pacote Vendas.main
+3- Verificar  ou alterar tabela
+ir tb_fornecedores- alter table- 
+
+-------------xxxxxxxxxxxxxxxxxxxxx-------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+3- verificar a chave estrangeira da tabela produtos que tem relacionamento
+alter table
+foreing keys
+xxx-------------------------xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-------
+4- criar pacote Vendas.test -- dentro dele classe GerarTabelasTest-- com o junit
+a-criar pacote Vendas.DAO-para fazer conexão com bd(salvar,excluir, editar) 
+b- Fornecedores.DAO.java
+xxxxxxxxxxxxxxx---------------xxxxxxxxxxxxxxx
+5- criar no pacote br.com.Vendas.tes uma classe FornecedorDAOTest
+a- rodar  no FornecedorDAOTest
+b- alterar no hibernate de  <property name="hbm2ddl.auto">update</property>
+para  <property name="hbm2ddl.auto">validate</property>
